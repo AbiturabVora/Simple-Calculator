@@ -18,5 +18,11 @@ function clearResult() {
 
 function deleteLast() {
     let result = document.getElementById('result').innerText;
-    document.getElementById('result').innerText = result.slice(0, -1);
-} /*game*/
+    if (result !== '0') {
+        if (result.length > 1) {
+            document.getElementById('result').innerText = result.slice(0, -1);
+        } else {
+            document.getElementById('result').innerText = '0';
+        }
+    }
+}
